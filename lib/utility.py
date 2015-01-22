@@ -1,8 +1,8 @@
 from django.conf import settings
 
 def activatePage(pageName):
-	for p, v in settings.GLOBAL_SETTINGS.page_list.items():
-		v = True if p == pageName else False
+	for p in settings.GLOBAL_SETTINGS["page_list"].items():
+		p.active = True if p.name == pageName else False
 
 class pageInfo:
 	def __init__(self, name, url, active):

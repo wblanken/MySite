@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
-from lib import utility
+from lib.utility import *
 
 def blog(request):
-	activatePage('blog')
-	pageSettings = settings.GLOBAL_SETTINGS.copy()
-	return render(request, "blog/base_blog.html", pageSettings)
+	activatePage('Blog')
+	return render(request, "blog/base_blog.html", settings.GLOBAL_SETTINGS)
