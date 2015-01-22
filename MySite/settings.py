@@ -7,6 +7,8 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
+from sets import set
+from utility import pageInfo
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -89,7 +91,18 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),
 				 os.path.join(BASE_DIR, "main/templates/main"),
 				 os.path.join(BASE_DIR, "blog/templates/blog"),)
+
+PAGE_LIST = set(
+[
+	pageInfo('Home', '/', false),
+	pageInfo('Blog', 'blog', false),
+	pageInfo('About', 'about', false),
+]
+)
 				 
 GLOBAL_SETTINGS = {
-		'title' : 'Will\'s Site',
- }
+	'title' : 'Will\'s Site',
+	'page_list' : PAGE_LIST,
+}
+ 
+
