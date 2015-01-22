@@ -7,13 +7,10 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
-from sets import set
-from utility import pageInfo
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -40,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'main',
     'blog',
+    'lib',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -92,13 +90,7 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, "templates"),
 				 os.path.join(BASE_DIR, "main/templates/main"),
 				 os.path.join(BASE_DIR, "blog/templates/blog"),)
 
-PAGE_LIST = set(
-[
-	pageInfo('Home', '/', false),
-	pageInfo('Blog', 'blog', false),
-	pageInfo('About', 'about', false),
-]
-)
+PAGE_LIST = []
 				 
 GLOBAL_SETTINGS = {
 	'title' : 'Will\'s Site',

@@ -55,3 +55,6 @@ target/
 
 # Project specific files
 db.sqlite3
+
+# Cloud 9 stuff
+.c9/
