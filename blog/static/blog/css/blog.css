@@ -51,6 +51,12 @@
   margin-bottom: 5px;
 }
 
+.link-img {
+	height: 32px;
+	width: 32px;
+	margin: 10px;
+}
+
 /* Pagination */
 .pager {
   margin-bottom: 60px;

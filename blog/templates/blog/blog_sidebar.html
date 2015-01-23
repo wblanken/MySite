@@ -9,18 +9,28 @@
 			<div class="sidebar-module">
 				<h4>Links</h4>
 				<ol class="list-unstyled">
-					<li class="sidebar-link"><a href="https://github.com/wblanken/" onmouseover="hover(this);" onmouseout="unhover(this);"><img src="{% static "images/GitHub-Mark-Light-32px.png" %}" /> GitHub</a></li>
+					<li class="sidebar-link"><a href="https://github.com/wblanken/" onmouseover="gitHover(this);" onmouseout="gitUnhover(this);">
+						<img class ="link-img"src="{% static 'images/GitHub-Mark-Light-32px.png' %}" /> GitHub</a></li>
 					<script> 
-						function hover(element) { element.childNodes[0].setAttribute('src', '{% static 'images/GitHub-Mark-32px.png' %}'); }
-						function unhover(element) { element.childNodes[0].setAttribute('src', '{% static 'images/GitHub-Mark-Light-32px.png' %}'); }
+						function gitHover(element) { element.getElementsByTagName('img')[0].setAttribute('src', '{% static 'images/GitHub-Mark-32px.png' %}'); }
+						function gitUnhover(element) { element.getElementsByTagName('img')[0].setAttribute('src', '{% static 'images/GitHub-Mark-Light-32px.png' %}'); }
 					</script>
+					<!--<li class="sidebar-link">
+						<a href="https://twitter.com/wblanken86" class="twitter-follow-button" data-show-count="false">Follow @wblanken86</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</li>-->
+					<li class="sidebar-link">
+						<a href="https://twitter.com/wblanken86" onmouseover="twitHover(this);" onmouseout="twitUnhover(this);">
+							<img class="link-img" src="{% static 'images/Twitter_logo_blue.png' %}" /> @wblanken86</a>
+					</li>
 					<li class="sidebar-link"><a href="http://jp.linkedin.com/in/wblanken">
 						<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View William Blankenship's profile on LinkedIn">
 					</a></li>
 					<!--<li><a href="#">LinkedIn</a></li>-->
-					<a href="https://twitter.com/wblanken86" class="twitter-follow-button" data-show-count="false">Follow @wblanken86</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-					<!--<li><a href="#">Twitter</a></li>-->
+					<script>
+						function twitHover(element) { element.getElementsByTagName('img')[0].setAttribute('src', '{% static 'images/Twitter_logo_white.png' %}'); }
+						function twitUnhover(element) { element.getElementsByTagName('img')[0].setAttribute('src', '{% static 'images/Twitter_logo_blue.png' %}'); }						
+					</script>
 				</ol>
 			</div> <!-- sidebar links -->
 			<div class="sidebar-module">
