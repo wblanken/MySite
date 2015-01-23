@@ -1,2 +1,28 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
+{% block head %}
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}"></link>
+{% endblock %}
+
+{% block content %}
+	<div class="blog-header">
+		<h1 class="blog-title">Software Dev Blog</h1>
+		<p class="blog-description">The musings and stories of a software developer</p>
+	</div>
+	<div class="row">
+		{% block blog-posts %}
+			{% include "blog_posts.html" %}
+		{% endblock %} 
+		{% block sidebar %}
+			{% include "blog_sidebar.html" %}
+		{% endblock %}
+	</div> <!-- row -->
+{% endblock %}
+
+{% block footer %}
+<footer class="blog-footer">
+  <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a> and modified by <a href="/about">Will</a>.</p>
+  <p><a href="/blog">Back to top</a></p>
+</footer>
+{% endblock %}
