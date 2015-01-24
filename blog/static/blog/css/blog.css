@@ -54,7 +54,11 @@
 .link-img {
 	height: 32px;
 	width: 32px;
-	margin: 10px;
+	margin: 5px;
+}
+
+#linkedIn-button {
+	margin: 5px;
 }
 
 /* Pagination */
